@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Header />
-      <main className="max-w-[1280px] mx-auto px-10 py-20">
+  <main className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-20">
         <div className="text-center">
           <h1 className="text-6xl font-black text-[#141414] mb-4">404</h1>
           <h2 className="text-2xl font-bold text-[#141414] mb-4">Page Not Found</h2>

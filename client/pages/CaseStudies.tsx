@@ -8,7 +8,7 @@ export default function CaseStudies() {
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Header />
-      <main className="max-w-[1280px] mx-auto px-10 py-20">
+  <main className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-20">
         {/* <div className="text-center">
           <h1 className="text-4xl font-bold text-[#141414] mb-4">Case Studies</h1>
           <p className="text-lg text-[#737373] mb-8">
@@ -19,8 +19,8 @@ export default function CaseStudies() {
           </button>
         </div> */}
         
-        <div className="max-w-[1280px] mx-auto px-10 ">
-           <h2 className="text-[75px] font-black leading-6 text-[#141414] mb-16">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 ">
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight md:leading-[64px] text-[#141414] mb-10 md:mb-16">
           Case Studies
         </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -54,7 +54,7 @@ export default function CaseStudies() {
         <CaseStudiesSection />
         <HowWeWorkSection />
         <CTASection />
-        
+
       </main>
       <Footer />
     </div>

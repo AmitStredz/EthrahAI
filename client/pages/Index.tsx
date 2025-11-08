@@ -15,7 +15,7 @@ export default function Index() {
       <Header />
       
       {/* Hero Section */}
-      <section className="max-w-[1280px] mx-auto px-10 py-16 relative">
+  <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-16 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="relative w-full max-w-[512px] mx-auto lg:mx-0">
             <img 
@@ -26,7 +26,7 @@ export default function Index() {
           </div>
           
           <div className="space-y-6 text-center lg:text-left">
-            <h1 className="text-[48px] leading-[60px] font-black text-[#000] tracking-[-2px]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[48px] leading-tight md:leading-[60px] font-black text-[#000] tracking-[-2px]">
               AI Solutions That Grow With You
             </h1>
             <p className="text-base leading-6 text-[#000] max-w-[437px] mx-auto lg:mx-0">
@@ -40,8 +40,8 @@ export default function Index() {
       </section>
 
       {/* Trusted by Businesses Section */}
-      <section className="max-w-[1280px] mx-auto px-10 py-12">
-        <h2 className="text-[35px] leading-[23px] font-bold text-[#141414] text-center mb-8">
+      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-12">
+        <h2 className="text-2xl sm:text-3xl md:text-[35px] leading-tight font-bold text-[#141414] text-center mb-6 md:mb-8">
           Trusted by Businesses for
         </h2>
         
@@ -77,12 +77,12 @@ export default function Index() {
       </section>
 
       {/* Solutions for Every Business Size */}
-      <section className="max-w-[1280px] mx-auto px-10 py-12">
+      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-12">
         <div className="text-center mb-8">
-          <h2 className="text-[35px] leading-[28px] font-bold text-[#141414] mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-[35px] leading-tight font-bold text-[#141414] mb-2">
             Solutions for Every Business Size
           </h2>
-          <p className="text-sm leading-[21px] text-[#737373] max-w-[650px] mx-auto">
+          <p className="text-sm sm:text-base leading-[21px] text-[#737373] max-w-[650px] mx-auto">
             Whether you're starting out or scaling up, we have an AI solution designed for your specific needs.
           </p>
         </div>
@@ -119,9 +119,9 @@ export default function Index() {
       </section>
 
       {/* Our Products */}
-      <section className="max-w-[1280px] mx-auto px-10 py-12 relative">
+      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-12 relative">
         <div className="text-center mb-8">
-          <h2 className="text-[35px] leading-[28px] font-bold text-[#141414] mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-[35px] leading-tight font-bold text-[#141414] mb-2">
             Our Products
           </h2>
           <p className="text-sm leading-[21px] text-[#737373]">
@@ -165,9 +165,9 @@ export default function Index() {
       </section>
 
       {/* Solving Your Business Challenges */}
-      <section className="max-w-[1280px] mx-auto px-10 py-12">
+      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-12">
         <div className="text-center mb-8">
-          <h2 className="text-[35px] leading-[28px] font-bold text-[#141414] mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-[35px] leading-tight font-bold text-[#141414] mb-2">
             Solving Your Business Challenges
           </h2>
           <p className="text-sm leading-[21px] text-[#737373]">
@@ -412,16 +412,16 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="max-w-[1280px] mx-auto px-10 py-20 relative">
-        <div className="absolute inset-0 flex items-center justify-center opacity-30">
+      <section className="max-w-[1280px] mx-auto px-10 pb-20 ">
+        <div className=" flex items-center justify-center">
           <img 
             src="https://api.builder.io/api/v1/image/assets/TEMP/4953b8e8e7da6717153979b220041dd03c982554?width=1326" 
             alt="" 
-            className="w-[663px] h-[663px] object-contain blur-sm"
+            className="w-[663px] h-[663px] object-contain"
           />
         </div>
         
-        <div className="relative max-w-[808px] mx-auto text-center space-y-8">
+        <div className=" max-w-[808px] mx-auto text-center space-y-8">
           <h2 className="text-[36px] leading-[45px] font-black text-[#141414] tracking-[-1px]">
             Ready to Transform Your Business With AI?
           </h2>

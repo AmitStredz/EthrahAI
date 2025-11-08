@@ -10,7 +10,7 @@ export default function CaseStudiesSection() {
   const navigate = useNavigate();
   return (
     <section className="w-full bg-[#FEFEFE]">
-      <div className="max-w-[1280px] mx-auto px-10">
+      <div className="max-w-[1280px] mx-auto sm:px-10">
        
 
         <div className="mb-12">

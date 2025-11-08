@@ -2,6 +2,16 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ChevronDown } from "lucide-react";
+import { PiBrainLight, PiClock, PiMegaphone, PiPuzzlePiece, PiTarget, PiTelevisionSimple } from "react-icons/pi";
+import { SlPeople, SlSettings } from "react-icons/sl";
+import { PiRobot } from "react-icons/pi";
+import { IoIosSearch } from "react-icons/io";
+import { BsGraphUp } from "react-icons/bs";
+import { PiShieldCheck } from "react-icons/pi";
+import { IoChatbubbleEllipsesOutline, IoCodeSlashOutline } from "react-icons/io5";
+import { PiDatabase } from "react-icons/pi";
+import { IoIosCloudOutline } from "react-icons/io";
+import { GoPeople } from "react-icons/go";
 
 export default function Services() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -15,7 +25,7 @@ export default function Services() {
       <Header />
       
       {/* Hero Section */}
-      <section className="max-w-[1280px] mx-auto px-10 py-16 relative">
+  <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-16 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="relative w-full max-w-[687px] mx-auto lg:mx-0">
             <img 
@@ -26,7 +36,7 @@ export default function Services() {
           </div>
           
           <div className="space-y-6 text-center lg:text-left">
-            <h1 className="text-[48px] leading-[60px] font-black text-[#141414] tracking-[-2px]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[48px] leading-tight md:leading-[60px] font-black text-[#141414] tracking-[-2px]">
               Transforming Businesses with AI
             </h1>
             <p className="text-base leading-6 text-[#141414] max-w-[437px] mx-auto lg:mx-0">
@@ -40,7 +50,7 @@ export default function Services() {
       </section>
 
       {/* About ETHRAH AI */}
-      <section className="max-w-[1280px] mx-auto px-10 py-12">
+  <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-12">
         <h2 className="text-[22px] leading-[28px] font-bold text-[#141414] mb-4">
           About ETHRAH AI
         </h2>
@@ -50,49 +60,93 @@ export default function Services() {
       </section>
 
       {/* Our AI Services & Capabilities */}
-      <section className="max-w-[1280px] mx-auto px-10 py-12">
+  <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-12">
         <h2 className="text-[22px] leading-[28px] font-bold text-[#141414] mb-6">
           Our AI Services & Capabilities
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 mb-3">
           {[
             {
-              icon: (
-                <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M22.5 9.37109C22.498 7.34353 21.3308 5.49763 19.5 4.62641V4.49609C19.4982 2.51191 18.1971 0.763053 16.2971 0.191119C14.3971 -0.380815 12.3468 0.359167 11.25 2.01266C10.1532 0.359167 8.10286 -0.380815 6.20289 0.191119C4.30292 0.763053 3.00178 2.51191 3 4.49609V4.62641C1.16746 5.49532 -0.000703216 7.34205 -0.000703216 9.37016C-0.000703216 11.3983 1.16746 13.245 3 14.1139V14.2461C3.00178 16.2303 4.30292 17.9791 6.20289 18.5511C8.10286 19.123 10.1532 18.383 11.25 16.7295C12.3468 18.383 14.3971 19.123 16.2971 18.5511C18.1971 17.9791 19.4982 16.2303 19.5 14.2461V14.1139C21.3305 13.2433 22.4977 11.3981 22.5 9.37109Z" fill="#141414"/>
-                </svg>
-              ),
+              icon: <PiBrainLight />,
               title: "AI Consulting",
               description: "Expert guidance on AI adoption and implementation."
             },
             {
-              icon: (
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M9.81055 5.30859C7.32527 5.30859 5.31055 7.32331 5.31055 9.80859C5.31055 12.2939 7.32527 14.3086 9.81055 14.3086C12.2958 14.3086 14.3105 12.2939 14.3105 9.80859C14.308 7.32438 12.2948 5.31118 9.81055 5.30859Z" fill="#141414"/>
-                </svg>
-              ),
+              icon: <SlSettings />,
               title: "Custom AI Model Development",
               description: "Tailored AI models to meet specific business needs."
             },
             {
-              icon: (
-                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M16.5 3.75H10.5V0.75C10.5 0.335786 10.1642 0 9.75 0C9.33579 0 9 0.335786 9 0.75V3.75H3C1.34315 3.75 0 5.09315 0 6.75V17.25C0 18.9069 1.34315 20.25 3 20.25H16.5C18.1569 20.25 19.5 18.9069 19.5 17.25V6.75C19.5 5.09315 18.1569 3.75 16.5 3.75Z" fill="#141414"/>
-                </svg>
-              ),
+              icon: <PiRobot />,
               title: "AI Integration",
               description: "Seamless integration of AI into existing systems."
             },
             {
-              icon: (
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M19.3021 18.2389L14.608 13.5458C17.4344 10.1526 17.0919 5.13647 13.8306 2.15888C10.5693 -0.818706 5.54283 -0.70447 2.42015 2.4182C-0.702517 5.54087 -0.816752 10.5674 2.16083 13.8287C5.13842 17.09 10.1545 17.4324 13.5477 14.6061L18.2409 19.3002C18.5339 19.5932 19.0091 19.5932 19.3021 19.3002C19.5952 19.0071 19.5952 18.532 19.3021 18.2389Z" fill="#141414"/>
-                </svg>
-              ),
+              icon: <IoIosSearch />,
               title: "AI Strategy & Planning",
               description: "Strategic planning for AI initiatives and roadmaps."
-            }
+            },
+            {
+              icon:<BsGraphUp />,
+              title: "AI-Powered Analytics",
+              description: "Advanced analytics powered by AI for deeper insights."
+            },
+            {
+              icon: <PiShieldCheck />,
+              title: "AI Security & Compliance",
+              description: "Ensuring security and compliance in AI solutions."
+            },
+            {
+              icon:<IoCodeSlashOutline />,
+              title: "AI Software Development",
+              description: "Developing custom AI-driven software applications."
+            },
+            {
+              icon: <PiDatabase />,
+              title: "Data Management & Engineering",
+              description: "Managing and engineering data for optimal AI performance."
+            },
+             {
+              icon: <IoIosCloudOutline />,
+              title: "Cloud AI Solutions",
+              description: "Leveraging cloud platforms for scalable AI solutions."
+            },
+            {
+              icon: <GoPeople />,
+              title: "AI for Customer Experience",
+              description: "Enhancing customer experience with AI-powered tools."
+            },
+            {
+              icon: <PiTelevisionSimple />,
+              title: "AI for Business Intelligence",
+              description: "Improving business intelligence through AI-driven analytics."
+            },
+            {
+              icon: <PiPuzzlePiece />,
+              title: "AI for Process Automation",
+              description: "Automating business processes with AI for increased efficiency."
+            },
+            {
+              icon: <IoChatbubbleEllipsesOutline />,
+              title: "AI Chatbots & Virtual Assistants",
+              description: "Developing AI-powered chatbots and virtual assistants."
+            },
+            {
+              icon: <PiMegaphone />,
+              title: "AI Marketing & Sales",
+              description: "Transforming marketing and sales strategies with AI."
+            },
+            {
+              icon: <PiTarget />,
+              title: " AI for Targeted Advertising",
+              description: " Optimizing advertising campaigns with AI-driven targeting."
+            },
+            {
+              icon: <PiClock />,
+              title: " AI Time Series Forecasting",
+              description: " Predicting future trends with AI time series forecasting."
+            },
           ].map((service, index) => (
             <div key={index} className="p-4 rounded-lg border border-[#E0E0E0] bg-white space-y-3">
               <div className="w-6 h-6 text-[#141414]">
@@ -110,100 +164,10 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-3">
-          {[
-            {
-              title: "AI-Powered Analytics",
-              description: "Advanced analytics powered by AI for deeper insights."
-            },
-            {
-              title: "AI Security & Compliance",
-              description: "Ensuring security and compliance in AI solutions."
-            },
-            {
-              title: "AI Software Development",
-              description: "Developing custom AI-driven software applications."
-            },
-            {
-              title: "Data Management & Engineering",
-              description: "Managing and engineering data for optimal AI performance."
-            }
-          ].map((service, index) => (
-            <div key={index} className="p-4 rounded-lg border border-[#E0E0E0] bg-white space-y-3">
-              <h3 className="text-base font-bold text-[#141414] leading-5">
-                {service.title}
-              </h3>
-              <p className="text-sm leading-[21px] text-[#757575]">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
-          {[
-            {
-              title: "Cloud AI Solutions",
-              description: "Leveraging cloud platforms for scalable AI solutions."
-            },
-            {
-              title: "AI for Customer Experience",
-              description: "Enhancing customer experience with AI-powered tools."
-            },
-            {
-              title: "AI for Business Intelligence",
-              description: "Improving business intelligence through AI-driven analytics."
-            },
-            {
-              title: "AI for Process Automation",
-              description: "Automating business processes with AI for increased efficiency."
-            },
-            {
-              title: "AI Chatbots & Virtual Assistants",
-              description: "Developing AI-powered chatbots and virtual assistants."
-            }
-          ].map((service, index) => (
-            <div key={index} className="p-4 rounded-lg border border-[#E0E0E0] bg-white space-y-3">
-              <h3 className="text-base font-bold text-[#141414] leading-5">
-                {service.title}
-              </h3>
-              <p className="text-sm leading-[21px] text-[#757575]">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-3 mt-3">
-          <div className="p-4 rounded-lg border border-[#E0E0E0] bg-white space-y-3">
-            <h3 className="text-base font-bold text-[#141414] leading-5">
-              AI Marketing & Sales
-            </h3>
-            <p className="text-sm leading-[21px] text-[#757575]">
-              Transforming marketing and sales strategies with AI.
-            </p>
-          </div>
-          <div className="p-4 rounded-lg border border-[#E0E0E0] bg-white space-y-3">
-            <h3 className="text-base font-bold text-[#141414] leading-5">
-              AI for Targeted Advertising
-            </h3>
-            <p className="text-sm leading-[21px] text-[#757575]">
-              Optimizing advertising campaigns with AI-driven targeting.
-            </p>
-          </div>
-          <div className="p-4 rounded-lg border border-[#E0E0E0] bg-white space-y-3">
-            <h3 className="text-base font-bold text-[#141414] leading-5">
-              AI Time Series Forecasting
-            </h3>
-            <p className="text-sm leading-[21px] text-[#757575]">
-              Predicting future trends with AI time series forecasting.
-            </p>
-          </div>
-        </div>
       </section>
 
       {/* Why Choose ETHRAH AI */}
-      <section className="max-w-[1280px] mx-auto px-10 py-12">
+  <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-12">
         <h2 className="text-[22px] leading-[28px] font-bold text-[#141414] mb-6">
           Why Choose ETHRAH AI
         </h2>
@@ -211,27 +175,48 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 mb-3">
           {[
             {
+              icon: <PiBrainLight />,
               title: "100% AI-Focused Expertise",
               description: "Our team is entirely focused on artificial intelligence, ensuring deep expertise."
             },
             {
+              icon: <PiPuzzlePiece />,
               title: "End-to-End Solutions",
               description: "We provide complete AI solutions, from consulting to deployment and support."
             },
             {
+              icon: <PiClock />,
               title: "Agile and Transparent Process",
               description: "Our agile approach ensures transparency and adaptability throughout the project."
             },
             {
+              icon: <PiShieldCheck />,
               title: "Latest Technologies & Tools",
               description: "We utilize the latest AI technologies and tools for optimal results."
             },
             {
+              icon: <PiRobot />,
               title: "Custom Solutions for Any Industry",
               description: "We tailor AI solutions to meet the unique needs of any industry."
-            }
+            },
+            {
+              icon: <SlPeople />,
+              title: "Security and Compliance",
+              description: " We prioritize security and compliance in all our AI solutions."
+            },
+            {
+              icon:<IoCodeSlashOutline />,
+              title: "Rapid Prototyping",
+              description: "We offer rapid prototyping to quickly demonstrate the value of AI solutions."
+            },
+
           ].map((item, index) => (
             <div key={index} className="p-4 rounded-lg border border-[#E0E0E0] bg-white space-y-3">
+              <div className="w-6 h-6 text-[#141414]">
+                {item.icon}
+              </div>
+              <div>
+                </div>
               <h3 className="text-base font-bold text-[#141414] leading-5">
                 {item.title}
               </h3>
@@ -241,29 +226,10 @@ export default function Services() {
             </div>
           ))}
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div className="p-4 rounded-lg border border-[#E0E0E0] bg-white space-y-3 max-w-[200px]">
-            <h3 className="text-base font-bold text-[#141414] leading-5">
-              Security and Compliance
-            </h3>
-            <p className="text-sm leading-[21px] text-[#757575]">
-              We prioritize security and compliance in all our AI solutions.
-            </p>
-          </div>
-          <div className="p-4 rounded-lg border border-[#E0E0E0] bg-white space-y-3 max-w-[200px]">
-            <h3 className="text-base font-bold text-[#141414] leading-5">
-              Rapid Prototyping
-            </h3>
-            <p className="text-sm leading-[21px] text-[#757575]">
-              We offer rapid prototyping to quickly demonstrate the value of AI solutions.
-            </p>
-          </div>
-        </div>
       </section>
 
       {/* How We Work */}
-      <section className="max-w-[1280px] mx-auto px-10 py-12">
+  <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-12">
         <h2 className="text-[22px] leading-[28px] font-bold text-[#141414] text-center mb-6">
           How We Work
         </h2>

@@ -38,7 +38,7 @@ export default function HowWeWorkSection() {
     <section className="w-full bg-[#FEFEFE] py-16">
       <div className="max-w-[1280px] mx-auto px-10">
         <div className="text-center mb-12">
-          <h2 className="text-[35px] font-bold leading-7 text-[#000] mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-[35px] font-bold leading-tight text-[#000] mb-4">
             How We Work
           </h2>
           <p className="text-sm leading-[21px] text-[#737373] max-w-[451px] mx-auto">

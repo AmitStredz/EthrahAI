@@ -35,7 +35,7 @@ export default function Contact() {
       <Header />
       
       {/* Hero Section */}
-      <section className="max-w-[1280px] mx-auto px-10 py-10">
+  <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-8 md:py-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 p-10">
           <div className="relative w-full max-w-[322px]">
             <svg width="323" height="279" viewBox="0 0 323 279" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Information */}
-      <section className="max-w-[1280px] mx-auto px-10 py-8">
+  <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-8">
         <h2 className="text-[22px] leading-[28px] font-bold text-[#141414] mb-6">
           Contact Information
         </h2>
@@ -103,7 +103,7 @@ export default function Contact() {
       </section>
 
       {/* Map */}
-      <section className="max-w-[1280px] mx-auto px-10 py-8">
+  <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-8">
         <div className="rounded-lg overflow-hidden h-[522px]">
           <img 
             src="https://api.builder.io/api/v1/image/assets/TEMP/54496f4e193481c7bdbfebf26b87e8328f7b999b?width=1856" 
@@ -114,7 +114,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form */}
-      <section className="max-w-[1280px] mx-auto px-10 py-12">
+  <section className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-12">
         <h2 className="text-[22px] leading-[28px] font-bold text-[#141414] mb-6">
           Tell Us About Your Project
         </h2>
