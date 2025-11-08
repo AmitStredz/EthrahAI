@@ -1,16 +1,17 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CaseStudiesSection() {
   const [activeTab, setActiveTab] = useState<"automation" | "trading">(
     "automation"
   );
 
+
+  const navigate = useNavigate();
   return (
-    <section className="w-full bg-[#FEFEFE] py-16">
+    <section className="w-full bg-[#FEFEFE]">
       <div className="max-w-[1280px] mx-auto px-10">
-        <h2 className="text-[75px] font-black leading-6 text-[#141414] mb-16">
-          Case Studies
-        </h2>
+       
 
         <div className="mb-12">
           <div className="border-b border-[#E0E0E0] px-4">
@@ -53,7 +54,8 @@ export default function CaseStudiesSection() {
                   professional verification for regulatory authorities
                   worldwide.
                 </p>
-                <button className="h-8 px-4 rounded-lg bg-[#F2F2F2] text-[#141414] text-sm font-medium leading-[21px] hover:bg-[#E5E8EB] transition-colors">
+                <button className="h-8 px-4 rounded-lg bg-[#F2F2F2] text-[#141414] text-sm font-medium leading-[21px] hover:bg-[#E5E8EB] transition-colors"
+                onClick={()=> navigate("/case-studies/automation")}>
                   View Full Case Study →
                 </button>
               </div>
@@ -88,7 +90,8 @@ export default function CaseStudiesSection() {
                   efficiency, reduce operational costs, and achieve complete
                   transparency across their fleets.
                 </p>
-                <button className="h-8 px-4 rounded-lg bg-[#F2F2F2] text-[#141414] text-sm font-medium leading-[21px] hover:bg-[#E5E8EB] transition-colors">
+                <button className="h-8 px-4 rounded-lg bg-[#F2F2F2] text-[#141414] text-sm font-medium leading-[21px] hover:bg-[#E5E8EB] transition-colors"
+                onClick={()=> navigate("/case-studies/maritime")}>
                   View Full Case Study →
                 </button>
               </div>

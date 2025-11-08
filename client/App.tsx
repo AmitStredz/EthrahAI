@@ -12,6 +12,8 @@ import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
+import CaseStudies1 from "./pages/CaseStudies-automation";
+import CaseStudies2 from "./pages/CaseStudies-maritime";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/automation" element={<CaseStudies1 />} />
+          <Route path="/case-studies/maritime" element={<CaseStudies2 />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />

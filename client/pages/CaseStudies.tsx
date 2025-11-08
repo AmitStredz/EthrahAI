@@ -18,7 +18,11 @@ export default function CaseStudies() {
             Contact Us
           </button>
         </div> */}
-        <div className="max-w-[1280px] mx-auto px-10 py-16 md:py-24">
+        
+        <div className="max-w-[1280px] mx-auto px-10 ">
+           <h2 className="text-[75px] font-black leading-6 text-[#141414] mb-16">
+          Case Studies
+        </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 md:order-1 flex justify-center">
               <img
@@ -50,6 +54,7 @@ export default function CaseStudies() {
         <CaseStudiesSection />
         <HowWeWorkSection />
         <CTASection />
+        
       </main>
       <Footer />
     </div>
