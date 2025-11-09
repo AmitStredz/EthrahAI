@@ -39,7 +39,7 @@ export default function Footer() {
 
         <div className="flex justify-center items-center gap-4 mb-6">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/ethrah-ai/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-6 h-6 text-[#737373] hover:text-[#141414] transition-colors"
@@ -79,7 +79,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/ethrah_ai?utm_source=qr&igsh=YTd6aHE0a2M1Z3Y2"
             target="_blank"
             rel="noopener noreferrer"
             className="w-6 h-6 text-[#737373] hover:text-[#141414] transition-colors"
