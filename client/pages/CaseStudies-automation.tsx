@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useNavigate } from "react-router-dom";
 
 export default function CaseStudies1() {
   const [activeTab, setActiveTab] = useState<"automation" | "finance">(
     "automation"
   );
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
@@ -33,7 +35,9 @@ export default function CaseStudies1() {
               </button>
               <button
                 // onClick={() => setActiveTab("finance")}
-                onClick={() => (window.location.href = "/case-studies")}
+                // onClick={() => (window.location.href = "/case-studies")}
+                onClick={() => navigate("/case-studies?tab=trading")}
+
                 className={`py-4 pb-[13px] font-bold text-sm leading-[21px] border-b-[3px] transition-all ${
                   activeTab === "finance"
                     ? "text-[#141414] border-[#141414]"
@@ -46,11 +50,12 @@ export default function CaseStudies1() {
           </div>
         </div>
 
-        {activeTab === "automation" ? (
+        <AutomationContent />
+        {/* {activeTab === "automation" ? (
           <AutomationContent />
         ) : (
           <FinanceContent />
-        )}
+        )} */}
       </main>
 
       <Footer />
@@ -447,76 +452,76 @@ function AutomationContent() {
   );
 }
 
-function FinanceContent() {
-  return (
-    <>
-      {/* Main Title */}
-      <div className="px-4 md:px-10 mb-[88px]">
-        <h2 className="text-2xl md:text-[30px] font-bold leading-[34px] text-[#141414] text-center max-w-[790px] mx-auto mb-[88px]">
-          AI-Powered Trading & Finance Solutions
-        </h2>
+// function FinanceContent() {
+//   return (
+//     <>
+//       {/* Main Title */}
+//       <div className="px-4 md:px-10 mb-[88px]">
+//         <h2 className="text-2xl md:text-[30px] font-bold leading-[34px] text-[#141414] text-center max-w-[790px] mx-auto mb-[88px]">
+//           AI-Powered Trading & Finance Solutions
+//         </h2>
 
-        <p className="text-lg md:text-xl leading-[25px] text-[#484848] text-center max-w-[888px] mx-auto px-4">
-          Ethrah AI's intelligent ship tracking solution revolutionizes fleet
-          management with real-time, AI-powered insights. By combining live
-          tracking, manual data input, and advanced analytics, it transforms
-          complex maritime data into actionable intelligence.
-        </p>
-      </div>
+//         <p className="text-lg md:text-xl leading-[25px] text-[#484848] text-center max-w-[888px] mx-auto px-4">
+//           Ethrah AI's intelligent ship tracking solution revolutionizes fleet
+//           management with real-time, AI-powered insights. By combining live
+//           tracking, manual data input, and advanced analytics, it transforms
+//           complex maritime data into actionable intelligence.
+//         </p>
+//       </div>
 
-      {/* Preview Section */}
-      <div className="px-4 md:px-10 mb-[157px]">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-[96px] max-w-[1087px] mx-auto">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/7a99c2764a7a12d9ea5cef679871eef084b54442?width=1024"
-            alt="Maritime Operations"
-            className="w-full md:w-[512px] h-auto md:h-[512px]"
-          />
+//       {/* Preview Section */}
+//       <div className="px-4 md:px-10 mb-[157px]">
+//         <div className="flex flex-col md:flex-row gap-8 md:gap-[96px] max-w-[1087px] mx-auto">
+//           <img
+//             src="https://api.builder.io/api/v1/image/assets/TEMP/7a99c2764a7a12d9ea5cef679871eef084b54442?width=1024"
+//             alt="Maritime Operations"
+//             className="w-full md:w-[512px] h-auto md:h-[512px]"
+//           />
 
-          <div className="flex flex-col justify-center">
-            <h3 className="text-2xl md:text-[30px] font-bold leading-[34px] text-[#141414] mb-8 md:mb-[87px]">
-              Transforming maritime operations through real-time AI insights.
-            </h3>
+//           <div className="flex flex-col justify-center">
+//             <h3 className="text-2xl md:text-[30px] font-bold leading-[34px] text-[#141414] mb-8 md:mb-[87px]">
+//               Transforming maritime operations through real-time AI insights.
+//             </h3>
 
-            <p className="text-base md:text-xl leading-[21px] text-[#484848] mb-[16px]">
-              Ethrah AI's intelligent ship tracking solution revolutionizes
-              fleet management with real-time, AI-powered insights. By combining
-              live tracking, manual data input, and advanced analytics, it
-              transforms complex maritime data into actionable intelligence —
-              helping ship owners worldwide enhance efficiency, reduce
-              operational costs, and achieve complete transparency across their
-              fleets.
-            </p>
+//             <p className="text-base md:text-xl leading-[21px] text-[#484848] mb-[16px]">
+//               Ethrah AI's intelligent ship tracking solution revolutionizes
+//               fleet management with real-time, AI-powered insights. By combining
+//               live tracking, manual data input, and advanced analytics, it
+//               transforms complex maritime data into actionable intelligence —
+//               helping ship owners worldwide enhance efficiency, reduce
+//               operational costs, and achieve complete transparency across their
+//               fleets.
+//             </p>
 
-            <button
-              className="w-fit px-4 h-8 rounded-lg bg-[#F2F2F2] text-[#141414] font-medium text-sm leading-[21px] mt-8 md:mt-[47px]"
-              onClick={() => (window.location.href = "/case-studies/maritime")}
-            >
-              View Full Case Study →
-            </button>
-          </div>
-        </div>
+//             <button
+//               className="w-fit px-4 h-8 rounded-lg bg-[#F2F2F2] text-[#141414] font-medium text-sm leading-[21px] mt-8 md:mt-[47px]"
+//               onClick={() => (window.location.href = "/case-studies/maritime")}
+//             >
+//               View Full Case Study →
+//             </button>
+//           </div>
+//         </div>
 
-        <p className="text-base leading-[21px] text-[#737373] text-center mt-12 md:mt-[86px]">
-          Transforming maritime operations through real-time AI insights.
-        </p>
-      </div>
+//         <p className="text-base leading-[21px] text-[#737373] text-center mt-12 md:mt-[86px]">
+//           Transforming maritime operations through real-time AI insights.
+//         </p>
+//       </div>
 
-      {/* CTA Section */}
-      <div className="bg-white py-12 md:py-20 px-4 md:px-10 mb-[60px] md:mb-[114px]">
-        <div className="max-w-[808px] mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-black leading-tight md:leading-[45px] text-[#141414] mb-6 md:mb-8 tracking-[-1px]">
-            Ready to Transform Your Business With AI?
-          </h2>
+//       {/* CTA Section */}
+//       <div className="bg-white py-12 md:py-20 px-4 md:px-10 mb-[60px] md:mb-[114px]">
+//         <div className="max-w-[808px] mx-auto text-center">
+//           <h2 className="text-2xl md:text-4xl font-black leading-tight md:leading-[45px] text-[#141414] mb-6 md:mb-8 tracking-[-1px]">
+//             Ready to Transform Your Business With AI?
+//           </h2>
 
-          <button className="h-12 px-5 rounded-lg bg-[#141414] text-[#FAFAFA] font-bold text-base leading-6">
-            Book Free Consultation
-          </button>
-        </div>
-      </div>
-    </>
-  );
-}
+//           <button className="h-12 px-5 rounded-lg bg-[#141414] text-[#FAFAFA] font-bold text-base leading-6">
+//             Book Free Consultation
+//           </button>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
 
 // Helper Components
 function InsightCard({ label, text }: { label: string; text: string }) {

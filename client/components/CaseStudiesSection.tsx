@@ -1,14 +1,28 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { toast } from "@/components/ui/use-toast";
 
 export default function CaseStudiesSection() {
+  const [searchParams] = useSearchParams();
+  const initialTabParam = searchParams.get("tab");
+  const initialTab: "automation" | "trading" =
+    initialTabParam === "trading" ? "trading" : "automation";
   const [activeTab, setActiveTab] = useState<"automation" | "trading">(
-    "automation"
+    initialTab
   );
 
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const tab = searchParams.get("tab");
+    if (tab === "trading" && activeTab !== "trading") {
+      setActiveTab("trading");
+    }
+    if (tab === "automation" && activeTab !== "automation") {
+      setActiveTab("automation");
+    }
+  }, [searchParams, activeTab]);
   return (
     <section className="w-full bg-[#FEFEFE]">
       <div className="max-w-[1280px] mx-auto sm:px-10">
@@ -18,7 +32,7 @@ export default function CaseStudiesSection() {
           <div className="border-b border-[#E0E0E0] px-4">
             <div className="flex gap-8">
               <button
-                onClick={() => setActiveTab("automation")}
+                onClick={() =>  navigate("/case-studies?tab=automation")}
                 className={`py-4 px-0 text-sm font-bold leading-[21px] border-b-[3px] transition-colors ${
                   activeTab === "automation"
                     ? "border-[#141414] text-[#141414]"
@@ -28,7 +42,7 @@ export default function CaseStudiesSection() {
                 Automation
               </button>
               <button
-                onClick={() => setActiveTab("trading")}
+                onClick={() =>  navigate("/case-studies?tab=trading")}
                 className={`py-4 px-0 text-sm font-bold leading-[21px] border-b-[3px] transition-colors ${
                   activeTab === "trading"
                     ? "border-[#141414] text-[#141414]"
